@@ -2,13 +2,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import ChatStack from '../navigation/ChatStack';
 import HomeStack from '../navigation/HomeStack';
-import { ProfileScreen } from '../screens';
+import AuthStack from '../navigation/AuthStack';
 
 const Tab = createBottomTabNavigator();
 
 export type TabNavigatorStackParamList = {
-    HomeScreen: any;
-    ProfileScreen: any;
+    HomeStack: any;
+    AuthStack: any;
+    ChatStack: any;
 };
 export default function TabNavigator() {
     return (
@@ -23,8 +24,8 @@ export default function TabNavigator() {
 
             })}>
             <Tab.Screen
-                name={'ProfileScreen'}
-                component={ProfileScreen}
+                name={'AuthStack'}
+                component={AuthStack}
                 options={{
                     tabBarLabel: 'پروفایل',
 
