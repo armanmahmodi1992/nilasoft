@@ -11,17 +11,18 @@ const CustomHeader = ({
 }: NativeStackHeaderProps) => {
     return (
         <HStack alignItems="center" h="50px" px="4" justifyContent='flex-end'>
+            <Text
+                fontSize={19}
+                textAlign="center">
+                {options?.headerTitle}
+            </Text>
             {back && (
                 <IconButton
                     onPress={() => navigation.goBack()}
                     icon={<Icon name="chevron-forward" size={24} />}
                 />
             )}
-            <Text
-                fontSize={19}
-                textAlign="center">
-                {options?.headerTitle}
-            </Text>
+
         </HStack>
     );
 };
