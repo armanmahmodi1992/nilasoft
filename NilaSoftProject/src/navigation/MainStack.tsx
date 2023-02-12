@@ -1,13 +1,14 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SplashScreen } from '../screens';
+import TabNavigator from '../navigation/TabNavigator';
+export type MainStackParamList = { TabNavigator: undefined };
 
 export default function MainStackNavigator() {
     const Stack = createNativeStackNavigator();
     return (
         <>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen name={'SplashScreen'} component={SplashScreen} />
+                <Stack.Screen name={'TabNavigator'} component={TabNavigator} />
             </Stack.Navigator>
         </>
     );
