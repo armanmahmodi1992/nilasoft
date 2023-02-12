@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ChatScreen } from '../screens';
-export type MainStackParamList = { ChatScreen: undefined };
+export type ChatStackParamList = { ChatScreen: undefined };
 
 export default function ChatStack() {
     const Stack = createNativeStackNavigator();
