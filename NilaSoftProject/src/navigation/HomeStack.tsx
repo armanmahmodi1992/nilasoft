@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from '../screens';
-export type MainStackParamList = { HomeScreen: undefined };
+export type HomeStackParamList = { HomeScreen: undefined };
 
 export default function HomeStack() {
     const Stack = createNativeStackNavigator();
