@@ -1,6 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ChatScreen } from '../screens';
+import CustomHeader from '../components/atom/CustomeHeader';
+
 export type ChatStackParamList = { ChatScreen: undefined };
 
 export default function ChatStack() {
@@ -8,7 +10,14 @@ export default function ChatStack() {
     return (
         <>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen name={'ChatScreen'} component={ChatScreen} />
+                <Stack.Screen name={'ChatScreen'} component={ChatScreen}
+                    options={{
+                        headerTitle: 'صفحه چت',
+                        headerShown: true,
+                        header: ({ route, options, navigation }: any) => (
+                            <CustomHeader back {...{ route, options, navigation }} />
+                        ),
+                    }} />
             </Stack.Navigator>
         </>
     );
