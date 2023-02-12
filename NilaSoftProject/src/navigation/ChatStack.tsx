@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ChatScreen } from '../screens';
-import CustomHeader from '../components/atom/CustomeHeader';
+import { ChatScreen } from '~/screens';
+import CustomHeader from '~/components/atom/CustomeHeader';
 
 export type ChatStackParamList = { ChatScreen: undefined };
 

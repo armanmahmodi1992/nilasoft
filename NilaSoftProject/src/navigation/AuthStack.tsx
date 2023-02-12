@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ProfileScreen } from '../screens';
-import CustomHeader from '../components/atom/CustomeHeader';
+import { ProfileScreen } from '~/screens';
+import CustomHeader from '~/components/atom/CustomeHeader';
 
 export type AuthStackParamList = { ProfileScreen: undefined };
 

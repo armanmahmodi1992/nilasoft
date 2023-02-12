@@ -1,6 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import TabNavigator from '../navigation/TabNavigator';
+import TabNavigator from '~/navigation/TabNavigator';
+
 export type MainStackParamList = { TabNavigator: undefined };
 
 export default function MainStackNavigator() {

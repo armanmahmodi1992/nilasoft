@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import ChatStack from '../navigation/ChatStack';
-import HomeStack from '../navigation/HomeStack';
-import AuthStack from '../navigation/AuthStack';
+import ChatStack from '~/navigation/ChatStack';
+import HomeStack from '~/navigation/HomeStack';
+import AuthStack from '~/navigation/AuthStack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Tab = createBottomTabNavigator();
