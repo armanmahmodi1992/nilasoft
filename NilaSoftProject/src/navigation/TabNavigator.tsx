@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import { HomeScreen, ProfileScreen } from '../screens';
 import ChatStack from '../navigation/ChatStack';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import HomeStack from '../navigation/HomeStack';
+import { ProfileScreen } from '../screens';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,8 +36,8 @@ export default function TabNavigator() {
                 options={{ tabBarLabel: 'چت' }}
             />
             <Tab.Screen
-                name={'HomeScreen'}
-                component={HomeScreen}
+                name={'HomeStack'}
+                component={HomeStack}
                 options={{ tabBarLabel: 'صفحه اصلی' }}
             />
         </Tab.Navigator>
