@@ -1,6 +1,14 @@
 import { MainStackParamList } from './MainStack';
-
-export type RootStackParamList = MainStackParamList;
+import { AuthStackParamList } from './AuthStack';
+import { ChatStackParamList } from './ChatStack';
+import { HomeStackParamList } from './HomeStack';
+import { TabNavigatorStackParamList } from './TabNavigator';
+export type RootStackParamList =
+    MainStackParamList &
+    AuthStackParamList &
+    ChatStackParamList &
+    HomeStackParamList &
+    TabNavigatorStackParamList;
 
 declare global {
     // Specifying this type is important if you heavily use useNavigation, Link etc. in your app since it'll ensure type-safety.
