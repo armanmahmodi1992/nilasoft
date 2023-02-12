@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ProfileScreen } from '../screens';
-export type MainStackParamList = { ProfileScreen: undefined };
+export type AuthStackParamList = { ProfileScreen: undefined };
 
 export default function AuthStack() {
     const Stack = createNativeStackNavigator();
