@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { HomeScreen, ProfileScreen } from '../screens';
 import ChatStack from '../navigation/ChatStack';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,10 +19,27 @@ export default function TabNavigator() {
                 tabBarHideOnKeyboard: true,
                 headerShown: false,
                 keyboardHidesTabBar: true,
+
+
             })}>
-            <Tab.Screen name={'HomeScreen'} component={HomeScreen} />
-            <Tab.Screen name={'ChatStack'} component={ChatStack} />
-            <Tab.Screen name={'ProfileScreen'} component={ProfileScreen} />
+            <Tab.Screen
+                name={'ProfileScreen'}
+                component={ProfileScreen}
+                options={{
+                    tabBarLabel: 'پروفایل',
+
+                }}
+            />
+            <Tab.Screen
+                name={'ChatStack'}
+                component={ChatStack}
+                options={{ tabBarLabel: 'چت' }}
+            />
+            <Tab.Screen
+                name={'HomeScreen'}
+                component={HomeScreen}
+                options={{ tabBarLabel: 'صفحه اصلی' }}
+            />
         </Tab.Navigator>
     );
 }
