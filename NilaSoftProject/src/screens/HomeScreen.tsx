@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-
+import CustomContainer from '~/components/atom/CustomContainer';
 export default function HomeScreen() {
     return (
-        <View style={styles.container}>
+        <CustomContainer>
             <Text>صفحه اصلی</Text>
-        </View>
+        </CustomContainer>
     );
 }
 
