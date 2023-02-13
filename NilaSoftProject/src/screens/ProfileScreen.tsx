@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
+import CustomContainer from '~/components/atom/CustomContainer';
 
 export default function ProfileScreen() {
     return (
-        <View style={styles.container}>
+        <CustomContainer>
             <Text>صفحه پروفایل</Text>
-        </View>
+        </CustomContainer>
     );
 }
 
