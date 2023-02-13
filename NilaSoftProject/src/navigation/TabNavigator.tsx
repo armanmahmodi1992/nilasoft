@@ -15,7 +15,7 @@ export type TabNavigatorStackParamList = {
 export default function TabNavigator() {
     return (
         <Tab.Navigator
-            initialRouteName="HomeScreen"
+            initialRouteName="HomeStack"
             backBehavior="initialRoute"
             screenOptions={({ route }) => ({
                 tabBarHideOnKeyboard: true,
@@ -34,22 +34,25 @@ export default function TabNavigator() {
                 },
             })}>
             <Tab.Screen
-                name={'AuthStack'}
-                component={AuthStack}
-                options={{
-                    tabBarLabel: 'پروفایل',
-                }}
+                name={'HomeStack'}
+                component={HomeStack}
+                options={{ tabBarLabel: 'Home' }}
             />
             <Tab.Screen
                 name={'ChatStack'}
                 component={ChatStack}
-                options={{ tabBarLabel: 'چت' }}
+                options={{ tabBarLabel: 'Chat' }}
             />
             <Tab.Screen
-                name={'HomeStack'}
-                component={HomeStack}
-                options={{ tabBarLabel: 'صفحه اصلی' }}
+                name={'AuthStack'}
+                component={AuthStack}
+                options={{
+                    tabBarLabel: 'Profile',
+                }}
             />
+
+
+
         </Tab.Navigator>
     );
 }
