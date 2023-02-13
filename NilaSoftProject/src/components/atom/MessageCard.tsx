@@ -5,14 +5,14 @@ import CustomImage from '~/components/atom/CustomImage';
 import { navigate } from '~/navigation/Methods';
 import { colors } from '~/styles';
 
-export default function MessageCard({ items }: { items: any }) {
+export default function MessageCard({ item }: { item: any }) {
 
     return (
         <View style={styles.content}>
-            <TouchableOpacity onPress={() => navigate('ChatScreen', items)}>
-                <HStack h='60' w='100%' direction='row-reverse' alignItems='center' borderWidth='1' borderRadius='10' p='2' borderColor={colors.GARY_4} >
-                    <Text style={styles.description}>{items?.name}</Text>
-                    <CustomImage local style={styles.image} imageSource={items?.avatar} resizeMode='cover' />
+            <TouchableOpacity onPress={() => navigate('Chat', { conversationId: 1, userId: 2 })}>
+                <HStack h='60' w='100%' direction='row-reverse' alignItems='center' borderRadius='10' p='2' >
+                    <Text style={styles.description}>{item?.name}</Text>
+                    <CustomImage local style={styles.image} imageSource={item?.avatar} resizeMode='cover' />
                 </HStack>
             </TouchableOpacity>
         </View>
