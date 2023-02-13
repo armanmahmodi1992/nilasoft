@@ -18,13 +18,7 @@ export default function ChatStack() {
                             <CustomHeader back {...{ route, options, navigation }} />
                         ),
                     }} />
-                <Stack.Screen name={'ChatScreen'} component={ChatScreen}
-                    options={{
-                        headerShown: true,
-                        header: ({ route, options, navigation }: any) => (
-                            <CustomHeader back {...{ route, options, navigation }} />
-                        ),
-                    }} />
+
 
             </Stack.Navigator>
         </>
