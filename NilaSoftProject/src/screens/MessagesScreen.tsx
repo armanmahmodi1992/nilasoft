@@ -1,23 +1,24 @@
-import { View, FlatList, StyleSheet, Text } from 'react-native'
+import { View, FlatList, StyleSheet } from 'react-native'
 import { Divider } from 'native-base';
 import React from 'react'
 import { items } from '~/store/MessageData';
-import MessageCart from '~/components/atom/MessageCart';
+import MessageCard from '~/components/atom/MessageCard';
 import { colors } from '~/styles';
+import CustomContainer from '~/components/atom/CustomContainer';
 
 const renderItem = ({ item }: { item: any }) => {
     return (
-        <MessageCart items={item} />
+        <MessageCard item={item} />
     )
 }
 
 const itemSeparator = () => (
-    <Divider m='2' />
+    <Divider m='4' />
 )
 
 export default function MessagesScreen() {
     return (
-        <View style={styles.container}>
+        <CustomContainer>
             <FlatList
                 contentContainerStyle={styles.contentContainerStyle}
                 data={items}
@@ -25,7 +26,7 @@ export default function MessagesScreen() {
                 renderItem={renderItem}
                 ItemSeparatorComponent={itemSeparator}
             />
-        </View>
+        </CustomContainer>
     )
 }
 
@@ -36,6 +37,5 @@ const styles = StyleSheet.create({
     contentContainerStyle: {
         flexGrow: 1,
         marginHorizontal: 4,
-        backgroundColor: colors.GARY_4
     }
 })
