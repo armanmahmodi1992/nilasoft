@@ -12,7 +12,7 @@ export default function AuthStack() {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name={'ProfileScreen'} component={ProfileScreen}
                     options={{
-                        headerTitle: 'پروفایل',
+                        headerTitle: 'Profile',
                         headerShown: true,
                         header: ({ route, options, navigation }: any) => (
                             <CustomHeader back {...{ route, options, navigation }} />
