@@ -12,7 +12,7 @@ export default function HomeStack() {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name={'HomeScreen'} component={HomeScreen}
                     options={{
-                        headerTitle: 'صفحه اصلی',
+                        headerTitle: 'Home',
                         headerShown: true,
                         header: ({ route, options, navigation }: any) => (
                             <CustomHeader {...{ route, options, navigation }} />
