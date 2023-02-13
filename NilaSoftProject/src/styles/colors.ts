@@ -6,6 +6,7 @@ export const SECONDARY_LIGHT = '#ff9642';
 export const SECONDARY_DARK = '#be3300';
 export const TEXT_ON_PRIMARY = '##000000';
 export const TEXT_ON_SECONDARY = '##000000';
+export const CHAT_BACKGROUND = '#eceff1';
 
 export const GARY_1 = '#333333';
 export const GARY_2 = '#4F4F4F';
