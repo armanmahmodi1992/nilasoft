@@ -10,7 +10,7 @@ const CustomHeader = ({
     navigation,
 }: NativeStackHeaderProps) => {
     return (
-        <HStack alignItems="center" h="50px" px="4" justifyContent='flex-end'>
+        <HStack alignItems="center" h="50px" px="4" justifyContent='space-between' >
             <Text
                 fontSize={19}
                 textAlign="center">
