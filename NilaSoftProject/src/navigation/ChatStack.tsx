@@ -12,7 +12,7 @@ export default function ChatStack() {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name={'MessagesScreen'} component={MessagesScreen}
                     options={{
-                        headerTitle: 'لیست گفتکو ها',
+                        headerTitle: 'ChatList',
                         headerShown: true,
                         header: ({ route, options, navigation }: any) => (
                             <CustomHeader back {...{ route, options, navigation }} />
